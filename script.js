@@ -12,7 +12,7 @@ const linkMap = new Map([...document.querySelectorAll('.nav-links a')]
 
 window.addEventListener('scroll', () => {
   const y = scrollY + 90;
-  let cur = 'home';
+  let cur = '';
   sections.forEach(s => { if(s.offsetTop <= y) cur = s.id; });
   linkMap.forEach((a, id) => a.classList.toggle('active', id === cur));
   document.getElementById('toTop').classList.toggle('show', scrollY > 500);
